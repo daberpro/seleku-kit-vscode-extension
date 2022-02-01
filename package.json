@@ -1,0 +1,45 @@
+{
+    "name": "seleku-kit",
+    "displayName": "seleku-kit",
+    "description": "a highlight syntax for seleku-kit",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "icon": "icon/images/seleku-kit.png",
+    "contributes": {
+        "snippets": [
+			{
+				"language": "seleku",
+				"path": "./snippets/seleku.json"
+		    }
+        ],
+        "languages": [
+            {
+                "id": "seleku",
+                "aliases": [
+                    "seleku-kit",
+                    "seleku"
+                ],
+                "extensions": [
+                    ".selek"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        
+        "grammars": [
+            {
+                "language": "seleku",
+                "scopeName": "source.selek",
+                "path": "./syntaxes/seleku.tmLanguage.json",
+                "embeddedLanguages": {
+                    "meta.embedded.block.javascript": "javascript"
+                }
+            }
+        ]
+    }
+}
